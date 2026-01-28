@@ -25,6 +25,6 @@ while True:
     if cv2.waitKey(2) & 0xff == 27:
         cv2.destroyAllWindows()
         break
-    print "Finished frame {}".format(n)
+    print(f"Finished frame {format(n)}")
     n=n+1
 

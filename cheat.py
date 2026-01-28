@@ -47,7 +47,7 @@ while True:
     face_cascade = cv2.CascadeClassifier('haarcascade_frontalface_default.xml')
     faces = face_cascade.detectMultiScale(grey, 1.2, 2)
     for (x,y,w,h) in faces:
-         print "found a face"
+         print("found a face")
          cv2.rectangle(img,(x,y),(x+w,y+h),(255,0,0),2)
         # exercise 4b
          cv2.rectangle(motionmask_visualisation,(x,y),(x+w,y+h),(255,0,0),2)
@@ -61,6 +61,5 @@ while True:
     if cv2.waitKey(2) & 0xff == 27:
         cv2.destroyAllWindows()
         break
-    print "Finished frame {}".format(n)
+    print(f"Finished frame {n}")
     n=n+1
-
